@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=B612:ital,wght@1,700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{url_for('static',filename='home.css')}}">
+    </head>
+    <body>
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="{{url_for('auth.edit')}}">Edit Profile</a>
+            <a href="{{url_for('auth.feed')}}">Feedback</a>
+        </div>
+        <div class="container">
+            <hr>
+            <img src={{url_for('static',filename='img.jpg')}} alt="Snow" style="width:100%;">
+            <div class="top-left">
+                <p>
+                    The secret to getting ahead is getting started
+                </p>
+                <p>
+                    start your streming by cliking stream
+                </p>
+                <div class = "btn-make">
+                    <form method="POST" action={{url_for('auth.with_suggestions')}}>
+                        <input type="hidden" name="btn_identifier" value="streamer" />
+                        <input type="submit" value="stream" id="something">
+                    </form>
+                </div>
+            </div>
+            <hr id="bottom">
+            <img src={{url_for('static',filename='img.jpg')}} alt="Snow" style="width:100%;">
+            <div class="top-left-2">
+                <p>
+                    The secret to getting ahead is getting started
+                </p>
+                <p>
+                    start your streming by cliking view
+                </p>
+                <div class = "btn-make-2">
+                    <form method="POST" action={{url_for('auth.sugge')}}>
+                        <input type="hidden" name="btn_identifier" value="text_id_identifier" />
+                        <input type="submit" value="view" id="something">
+                    </form>                    
+                </div>
+            </div>
+        </div>
+     </body>
+</html> 

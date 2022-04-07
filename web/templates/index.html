@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=B612:ital,wght@1,700&display=swap" rel="stylesheet">
+        <style>
+            label
+            {
+                font-family: 'B612';
+
+            }
+            #left{
+                margin-left: -50px;
+            }
+            fieldset{
+                margin-top: 200px;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                border-radius: 4px;
+                margin-left: 500px;
+                margin-right: 500px;
+                background-color: antiquewhite;
+            }
+        </style>
+    </head>
+    <body>  
+        <center>
+            <form method="POST">
+                <fieldset>
+                    {{ form.hidden_tag() }}
+                    <label>Name</label>: {{ form.name() }} {% for error in form.name.errors %}{{ error }}{% endfor %}<br><br>
+                    <label id="left">Room Name</label>: {{ form.room() }} {% for error in form.room.errors %}{{ error }}{% endfor %}<br><br>
+                    {{ form.submit() }}
+                </fieldset>
+            </form>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <title>{% block title %}Sign-up{% endblock %} </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="{{url_for('static',filename='signup.css')}}">
+  </head>
+  <body>
+    {% with messages = get_flashed_messages(with_categories=true) %} 
+    {% if messages %} {% for category, message in messages %} {% if category ==
+        'error' %}
+        <div class="alert alert-danger alter-dismissable fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% else %}
+        <div class="alert alert-success alter-dismissable fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endif %} {% endfor %} {% endif %} {% endwith %}
+    <form method="POST">
+        <div class="section">
+            <div class="new">
+                <br><br>
+                <fieldset>
+                    <h1>Creat your account</h1>
+                    <input type="text" id="user_name" name="username" placeholder="Phone Number,Username, or e-mail">
+                    <br><br>
+                    <input type="password" id="user_pass" name = "password" placeholder="Password" pattern="^\S+$" title="white space is not allowed" onchange='check_pass();' required>
+                    <br><br>
+                    <input type="password" id="user_pass2" name = "confirm_password" placeholder="renter the password" pattern="^\S+$" title="white space is not allowed" onchange='check_pass();' required>
+                    <br><br>
+                    <input type="submit" name=but_submit value="Sign up" id="submit" disabled/>
+                    <br><br>
+                    <hr>
+                    <p>
+                        If you already have Account!<a href="/">Click Here..</a>
+                    </p>
+                </fieldset>
+            </div>
+            <div class="video-container">
+                <div class="color-overlay"></div>
+                <video autoplay loop muted>
+                    <source src={{url_for('static',filename='1.mp4')}} type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </form>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+        function check_pass() 
+        {
+            if (document.getElementById('user_pass').value == document.getElementById('user_pass2').value)
+            {
+                document.getElementById('submit').disabled = false;
+            } 
+            else 
+            {
+                document.getElementById('submit').disabled = true;
+            }
+        }        
+    </script>
+  </body>
+</html>

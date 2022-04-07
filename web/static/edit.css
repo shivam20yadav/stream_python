@@ -1,0 +1,43 @@
+body{
+    background-color: aqua;
+}
+.edit{
+    font-family: 'Comic Sans MS';
+    margin-top: 200px;
+}
+.edit input[type=text]{
+    border-radius: 4px;
+    width: 300px;
+    height: 30px;
+    padding-left: 14px;
+}
+.edit input[type=password]{
+    border-radius: 4px;
+    width: 300px;
+    height: 30px;
+    padding-left: 14px;
+}
+.edit p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size:  27px;
+}
+.edit fieldset{
+    margin-right:70px;
+    margin-left:20px;
+    margin-bottom:130px;
+    border-bottom-left-radius:7px;
+    border-bottom-right-radius:7px;
+    border-top-left-radius:7px;
+    border-top-right-radius:7px;
+    width: 300px;
+    height: 300px;
+}
+.edit input[type=submit]{
+    width: 300px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: rgb(92, 223, 92);
+
+}

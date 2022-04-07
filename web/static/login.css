@@ -1,0 +1,150 @@
+        *{
+            margin:0;
+            padding:0;
+        }
+        .section{
+            width:100%;
+            padding-left:40px;
+            padding-top:40px;
+            padding-right:40px;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            
+        }
+        .video-container{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        
+        }
+        .new{
+            z-index: 1;
+        }
+        .new fieldset{
+            border: 1px solid;
+            width:300px;
+            border-bottom-left-radius:7px;
+            border-bottom-right-radius:7px;
+            border-top-left-radius:7px;
+            border-top-right-radius:7px;
+            border: 2px solid;   
+            color:white;         
+        }
+        .new h1{
+            margin-left:85px;
+            margin-top:5px;
+            font-family:'Comic Sans MS';
+        }
+        .new input[type=text]{
+            width:250px; 
+            height:40px; 
+            border-bottom-left-radius:7px;
+            border-bottom-right-radius:7px;
+            border-top-left-radius:7px;
+            border-top-right-radius:7px;
+            font-family:'Comic Sans MS';
+            font-size:13px;
+            padding-left:10px;
+            margin-right:20px;
+            margin-left:20px
+        }
+        .new input[type=password]{
+            margin-left:20px;
+            margin-right:20px;
+            width:250px;
+            border-bottom-left-radius:7px;
+            border-bottom-right-radius:7px;
+            border-top-left-radius:7px;
+            border-top-right-radius:7px;
+            font-family:'Comic Sans MS';
+            font-size:13px;
+            height:40px;
+            padding-left:10px;
+        }
+        .new input[type=submit]{
+            width:250px;
+            height:40px;
+            border-bottom-left-radius:7px;
+            border-bottom-right-radius:7px;
+            border-top-right-radius:7px;
+            border-top-left-radius:7px;
+            font-family:'Comic Sans MS';
+            font-size:20px;
+            background-color:turquoise;
+            margin-left:20px;
+            margin-right:20px; 
+        }
+        .some{
+            display:none;
+        }
+        .new h3{
+            font-size:17px;
+            color:white;
+        }
+        .new .field fieldset{
+            width:250px;
+            margin-left:20px;
+            margin-bottom:10px;
+            padding-left:10px;
+            padding-top:2px;
+        }
+        @media screen and (min-width: 1000px) {
+            .new fieldset{
+                height:400px;
+                width:450px;     
+            }
+            .new h1{
+                padding-left:70px;
+            }
+            .new input[type=text]{
+                width:400px; 
+                font-size:20px;
+            }
+            .new input[type=password]{
+                width:400px; 
+                font-size:20px;
+            }
+            .new input[type=submit]{
+                width:400px; 
+                font-size:20px;
+            }
+            .some{
+                display:block;
+            }
+            .some hr{
+                width: 170px;
+                display: block;
+                display: inline-block;
+                color: white;
+                border-top: 2px solid;
+                margin-left:20px;
+            }
+            .new h3{
+                display:inline-block;
+                padding-left:5px;
+                padding-right:5px;
+            }
+            .new .field fieldset{
+                width:400px;
+                height:50px
+            }
+            .new .field h3{
+                font-size:2px;
+            }
+        }
+        @media screen and (min-width: 1024px) {
+            .new h1{
+                padding-bottom:1px;
+            }
+            .new .field h3{
+                font-size:20px;
+                margin-top:5px;
+            }
+        }
+  

@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+}
+.container {
+position: relative;
+text-align: center;
+color: white;
+}
+img{
+    height: 380px;
+}
+.top-left {
+    position: absolute;
+    top: 60px;
+    left: 56px;
+    margin-left: 50px;
+    font-family: 'B612', sans-serif;
+    font-size: larger;
+}
+p{
+    margin-left: -100px;
+}
+.container .top-left .btn-make #something{
+    background-color: #4CAF50; 
+    margin-left: -350px;
+    border: none;
+    color: white;
+    padding: 15px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
+.container hr{
+    background-color: #4CAF50;
+    height: 3px;
+}
+.container #bottom{
+    margin-top: -5px;
+}
+
+.top-left-2 {
+    position: absolute;
+    top: 460px;
+    left: 56px;
+    margin-left: 50px;
+    font-family: 'B612', sans-serif;
+    font-size: larger;
+}
+p{
+    margin-left: -100px;
+}
+.container .top-left-2 .btn-make-2 #something{
+    background-color: #4CAF50; 
+    margin-left: -350px;
+    border: none;
+    color: white;
+    padding: 15px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}  
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}  
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
